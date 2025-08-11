@@ -1,103 +1,235 @@
-import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div>
+      {/* Hero Section */}
+      <div className="relative">
+        <div
+          className="w-full h-[600px] bg-cover bg-center"
+          style={{
+            backgroundImage: `url('./images/hero-image.jpg')`,
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-[#f5f0e8] to-transparent">
+            <div className="container mx-auto px-4 h-full flex items-center">
+              <div className="max-w-lg">
+                <p className="text-[#8b5d3b] mb-2">
+                  HANDCRAFTED WITH LOVE IN OUR ARTISAN KITCHEN
+                </p>
+                <h2 className="text-5xl font-bold text-[#333] mb-4">
+                  Freshly Baked, <br />
+                  Just for You!
+                </h2>
+                <p className="text-[#614b41] mb-6">
+                  Discover freshly baked pastries made with premium ingredients
+                  and traditional recipes. Our master bakers create each item
+                  with passion, ensuring an unforgettable taste.
+                </p>
+                <button className="bg-[#8b5d3b] text-white px-8 py-3 rounded-full hover:bg-[#7a4e32] transition duration-300 !rounded-button whitespace-nowrap cursor-pointer">
+                  ORDER NOW
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+
+
+      {/* Why Choose Us Section */}
+      <div className="py-16 bg-[#f5f0e8]">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-[#333] mb-3">
+              Why Choose Us?
+            </h2>
+            <p className="text-[#614b41] max-w-2xl mx-auto">We use
+              only the finest ingredients for our breads, pastries, and cakes.
+              Every item is crafted by skilled artisans who are passionate about
+              their craft. We believe in quality over quantity.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg overflow-hidden shadow-md">
+              <div className="h-64 overflow-hidden">
+                <img
+                  src="./images/breads.jpg"
+                  alt="Artisan Breads"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-[#333] mb-3">
+                  Artisan Breads
+                </h3>
+                <p className="text-[#614b41] mb-4">
+                  Handcrafted sourdough and specialty breads made with organic
+                  flour and traditional fermentation methods. Our breads have
+                  the perfect crust and soft, flavorful interior.
+                </p>
+                <button className="bg-[#8b5d3b] text-white px-6 py-2 rounded-full hover:bg-[#7a4e32] transition duration-300 !rounded-button whitespace-nowrap cursor-pointer">
+                  VIEW MENU
+                </button>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-lg overflow-hidden shadow-md">
+              <div className="h-64 overflow-hidden">
+                <img
+                  src="./images/Pastries.jpg"
+                  alt="Sweet Pastries"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-[#333] mb-3">
+                  Sweet Pastries
+                </h3>
+                <p className="text-[#614b41] mb-4">
+                  Delicate and buttery pastries that melt in your mouth. From
+                  classic croissants to innovative seasonal creations, our
+                  pastries are made fresh daily with premium ingredients.
+                </p>
+                <button className="bg-[#8b5d3b] text-white px-6 py-2 rounded-full hover:bg-[#7a4e32] transition duration-300 !rounded-button whitespace-nowrap cursor-pointer">
+                  VIEW MENU
+                </button>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-lg overflow-hidden shadow-md">
+              <div className="h-64 overflow-hidden">
+                <img
+                  src="./images/Cacks.jpg"
+                  alt="Custom Cakes"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-[#333] mb-3">
+                  Custom Cakes
+                </h3>
+                <p className="text-[#614b41] mb-4">
+                  Celebrate special moments with our custom-designed cakes. From
+                  elegant wedding cakes to fun birthday creations, our pastry
+                  chefs will bring your vision to life with exquisite taste.
+                </p>
+                <button className="bg-[#8b5d3b] text-white px-6 py-2 rounded-full hover:bg-[#7a4e32] transition duration-300 !rounded-button whitespace-nowrap cursor-pointer">
+                  VIEW MENU
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      {/* Visit Us Today Section */}
+      <div className="py-16 bg-[#f5f0e8]">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-center">
+            <div className="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+              <h2 className="text-3xl font-bold text-[#333] mb-6">
+                Visit Us Today
+              </h2>
+              <p className="text-[#614b41] mb-6">
+                Located in the heart of downtown, our bakery offers a cozy and
+                welcoming atmosphere. Enjoy our freshly baked treats with a cup
+                of our specialty coffee.
+              </p>
+              <p className="text-[#614b41] mb-6">
+                Open daily from 7am to 9pm. Special holiday hours may apply.
+                Join us for breakfast, lunch, or an afternoon treat. We also
+                offer catering services for special events.
+              </p>
+              <button className="bg-[#8b5d3b] text-white px-6 py-3 rounded-full hover:bg-[#7a4e32] transition duration-300 !rounded-button whitespace-nowrap cursor-pointer">
+                VISIT US TODAY
+              </button>
+            </div>
+            <div className="md:w-1/2 grid grid-cols-2 gap-4">
+              <img
+                src="./images/vafels.jpg"
+                alt="Bakery Interior"
+                className="rounded-lg w-full h-full object-cover object-top"
+              />
+              <img
+                src="./images/cacke.jpg"
+                alt="Bakery Products"
+                className="rounded-lg w-full h-full object-cover object-top"
+              />
+              <img
+                src="./images/dnots.jpg"
+                alt="Artisan Bread"
+                className="rounded-lg w-full h-full object-cover object-top"
+              />
+              <img
+                src="./images/bread.jpg"
+                alt="Custom Cake"
+                className="rounded-lg w-full h-full object-cover object-top"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      {/* Gallery Section */}
+      <div className="py-16 bg-[#f5f0e8]">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="overflow-hidden rounded-lg">
+              <img
+                src="./images/makaron.jpg"
+                alt="Macarons"
+                className="w-full h-full object-cover object-top hover:scale-105 transition duration-500"
+              />
+            </div>
+            <div className="overflow-hidden rounded-lg">
+              <img
+                src="./images/cackee.jpg"
+                alt="Twisted Pastry"
+                className="w-full h-full object-cover object-top hover:scale-105 transition duration-500"
+              />
+            </div>
+            <div className="overflow-hidden rounded-lg">
+              <img
+                src="./images/korosan.jpg"
+                alt="Berry Cake"
+                className="w-full h-full object-cover object-top hover:scale-105 transition duration-500"
+              />
+            </div>
+          </div>
+
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="text-center p-6">
+              <h3 className="text-2xl font-bold text-[#333] mb-4">
+                Explore Baking
+              </h3>
+              <p className="text-[#614b41] mb-6">
+                Join our baking classes and learn the secrets behind our
+                delicious creations. From bread making to cake decorating, our
+                expert bakers will guide you through every step.
+              </p>
+              <button className="bg-[#8b5d3b] text-white px-6 py-2 rounded-full hover:bg-[#7a4e32] transition duration-300 !rounded-button whitespace-nowrap cursor-pointer">
+                LEARN MORE
+              </button>
+            </div>
+            <div className="text-center p-6">
+              <h3 className="text-2xl font-bold text-[#333] mb-4">
+                Instagram Baking
+              </h3>
+              <p className="text-[#614b41] mb-6">
+                Follow us on Instagram for daily inspiration, behind-the-scenes
+                content, and exclusive offers. Tag us in your photos to be
+                featured on our page!
+              </p>
+              <button className="bg-[#8b5d3b] text-white px-6 py-2 rounded-full hover:bg-[#7a4e32] transition duration-300 !rounded-button whitespace-nowrap cursor-pointer">
+                FOLLOW US
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
